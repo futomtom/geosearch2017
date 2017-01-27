@@ -8,11 +8,14 @@
 
 import UIKit
 import CoreData
+import MapKit
 
-
-class ViewController: UITableViewController, NSFetchedResultsControllerDelegate
+class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
 {
 
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
+    
     var coreDataStack: CoreDataStack!
     var fetchedResultsController: NSFetchedResultsController<Restaurant>!
 
@@ -39,17 +42,17 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate
     }
 
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print (fetchedResultsController.sections?[section].objects?.count)
         return fetchedResultsController.sections?[section].objects?.count ?? 0
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell()
         
         guard let sections = fetchedResultsController.sections else {

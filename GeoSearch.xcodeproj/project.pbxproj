@@ -15,7 +15,7 @@
 		FAA5F1211E3ADC7300E06810 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */; };
 		FAA5F1231E3ADC9C00E06810 /* GeoSearch.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1221E3ADC9C00E06810 /* GeoSearch.xcdatamodel */; };
 		FAA5F1281E3AE15700E06810 /* Restaurant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1261E3AE15700E06810 /* Restaurant+CoreDataClass.swift */; };
-		FAA5F12F1E3AF62E00E06810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F12E1E3AF62E00E06810 /* ViewController.swift */; };
+		FAA5F12F1E3AF62E00E06810 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F12E1E3AF62E00E06810 /* MainViewController.swift */; };
 		FAA5F1361E3B05E900E06810 /* Geohash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1351E3B05E900E06810 /* Geohash.swift */; };
 		FAA5F1411E3B097000E06810 /* GeoSearch.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F13E1E3B097000E06810 /* GeoSearch.sqlite */; };
 		FAA5F1421E3B097000E06810 /* GeoSearch.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F13F1E3B097000E06810 /* GeoSearch.sqlite-shm */; };
@@ -35,7 +35,7 @@
 		FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FAA5F1221E3ADC9C00E06810 /* GeoSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoSearch.xcdatamodel; sourceTree = "<group>"; };
 		FAA5F1261E3AE15700E06810 /* Restaurant+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Restaurant+CoreDataClass.swift"; path = "GeoSearch/Restaurant+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FAA5F12E1E3AF62E00E06810 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAA5F12E1E3AF62E00E06810 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FAA5F1351E3B05E900E06810 /* Geohash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geohash.swift; sourceTree = "<group>"; };
 		FAA5F13E1E3B097000E06810 /* GeoSearch.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeoSearch.sqlite; sourceTree = "<group>"; };
 		FAA5F13F1E3B097000E06810 /* GeoSearch.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoSearch.sqlite-shm"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */,
-				FAA5F12E1E3AF62E00E06810 /* ViewController.swift */,
+				FAA5F12E1E3AF62E00E06810 /* MainViewController.swift */,
 				FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */,
 				FAA5F1101E3AD2F900E06810 /* Main.storyboard */,
 				FAA5F1351E3B05E900E06810 /* Geohash.swift */,
@@ -244,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA5F12F1E3AF62E00E06810 /* ViewController.swift in Sources */,
+				FAA5F12F1E3AF62E00E06810 /* MainViewController.swift in Sources */,
 				FAA5F1211E3ADC7300E06810 /* CoreDataStack.swift in Sources */,
 				FAA5F1281E3AE15700E06810 /* Restaurant+CoreDataClass.swift in Sources */,
 				FAA5F1361E3B05E900E06810 /* Geohash.swift in Sources */,
