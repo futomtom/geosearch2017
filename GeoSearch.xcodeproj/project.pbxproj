@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		678104B7B37B062AAAD618F1 /* Pods_GeoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */; };
+		FAA5F10D1E3AD2F900E06810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */; };
+		FAA5F10F1E3AD2F900E06810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F10E1E3AD2F900E06810 /* ViewController.swift */; };
+		FAA5F1121E3AD2F900E06810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1101E3AD2F900E06810 /* Main.storyboard */; };
+		FAA5F1141E3AD2F900E06810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1131E3AD2F900E06810 /* Assets.xcassets */; };
+		FAA5F1171E3AD2F900E06810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1151E3AD2F900E06810 /* LaunchScreen.storyboard */; };
+		FAA5F1211E3ADC7300E06810 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */; };
+		FAA5F1231E3ADC9C00E06810 /* GeoSearch.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1221E3ADC9C00E06810 /* GeoSearch.xcdatamodel */; };
+		FAA5F1251E3ADCC400E06810 /* businesses.csv in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1241E3ADCC400E06810 /* businesses.csv */; };
+		FAA5F1281E3AE15700E06810 /* Restaurant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F1261E3AE15700E06810 /* Restaurant+CoreDataClass.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		229A113ECBC82D9610021699 /* Pods-GeoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch.release.xcconfig"; sourceTree = "<group>"; };
+		433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA844EF116F6A98AFFDCDFAE /* Pods-GeoSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		FAA5F1091E3AD2F900E06810 /* GeoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA5F10E1E3AD2F900E06810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAA5F1111E3AD2F900E06810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA5F1131E3AD2F900E06810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA5F1161E3AD2F900E06810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA5F1181E3AD2F900E06810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FAA5F1221E3ADC9C00E06810 /* GeoSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoSearch.xcdatamodel; sourceTree = "<group>"; };
+		FAA5F1241E3ADCC400E06810 /* businesses.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = businesses.csv; sourceTree = "<group>"; };
+		FAA5F1261E3AE15700E06810 /* Restaurant+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Restaurant+CoreDataClass.swift"; path = "GeoSearch/Restaurant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAA5F12B1E3AF13400E06810 /* GeoSearch.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeoSearch.sqlite; sourceTree = "<group>"; };
+		FAA5F12C1E3AF13400E06810 /* GeoSearch.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoSearch.sqlite-shm"; sourceTree = "<group>"; };
+		FAA5F12D1E3AF13400E06810 /* GeoSearch.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoSearch.sqlite-wal"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA5F1061E3AD2F900E06810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678104B7B37B062AAAD618F1 /* Pods_GeoSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E17DFA37453B7BE6E6C7EEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C73721D1DD8AF99D4791D8AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA844EF116F6A98AFFDCDFAE /* Pods-GeoSearch.debug.xcconfig */,
+				229A113ECBC82D9610021699 /* Pods-GeoSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAA5F1001E3AD2F900E06810 = {
+			isa = PBXGroup;
+			children = (
+				FAA5F12A1E3AE16100E06810 /* model */,
+				FAA5F10B1E3AD2F900E06810 /* GeoSearch */,
+				FAA5F10A1E3AD2F900E06810 /* Products */,
+				C73721D1DD8AF99D4791D8AD /* Pods */,
+				6E17DFA37453B7BE6E6C7EEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA5F10A1E3AD2F900E06810 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5F1091E3AD2F900E06810 /* GeoSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA5F10B1E3AD2F900E06810 /* GeoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */,
+				FAA5F10E1E3AD2F900E06810 /* ViewController.swift */,
+				FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */,
+				FAA5F1101E3AD2F900E06810 /* Main.storyboard */,
+				FAA5F1221E3ADC9C00E06810 /* GeoSearch.xcdatamodel */,
+				FAA5F1241E3ADCC400E06810 /* businesses.csv */,
+				FAA5F1131E3AD2F900E06810 /* Assets.xcassets */,
+				FAA5F12B1E3AF13400E06810 /* GeoSearch.sqlite */,
+				FAA5F12C1E3AF13400E06810 /* GeoSearch.sqlite-shm */,
+				FAA5F12D1E3AF13400E06810 /* GeoSearch.sqlite-wal */,
+				FAA5F1151E3AD2F900E06810 /* LaunchScreen.storyboard */,
+				FAA5F1181E3AD2F900E06810 /* Info.plist */,
+			);
+			path = GeoSearch;
+			sourceTree = "<group>";
+		};
+		FAA5F12A1E3AE16100E06810 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA5F1261E3AE15700E06810 /* Restaurant+CoreDataClass.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA5F1081E3AD2F900E06810 /* GeoSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA5F11B1E3AD2F900E06810 /* Build configuration list for PBXNativeTarget "GeoSearch" */;
+			buildPhases = (
+				0B22DB75F417406AE909E9FE /* [CP] Check Pods Manifest.lock */,
+				FAA5F1051E3AD2F900E06810 /* Sources */,
+				FAA5F1061E3AD2F900E06810 /* Frameworks */,
+				FAA5F1071E3AD2F900E06810 /* Resources */,
+				DB4E76D34824C2531B20B823 /* [CP] Embed Pods Frameworks */,
+				DFB8B6EE8E46BA90EC5F3C11 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoSearch;
+			productName = GeoSearch;
+			productReference = FAA5F1091E3AD2F900E06810 /* GeoSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA5F1011E3AD2F900E06810 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Alex;
+				TargetAttributes = {
+					FAA5F1081E3AD2F900E06810 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6A7K9VGHXX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FAA5F1041E3AD2F900E06810 /* Build configuration list for PBXProject "GeoSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAA5F1001E3AD2F900E06810;
+			productRefGroup = FAA5F10A1E3AD2F900E06810 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA5F1081E3AD2F900E06810 /* GeoSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA5F1071E3AD2F900E06810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA5F1251E3ADCC400E06810 /* businesses.csv in Resources */,
+				FAA5F1171E3AD2F900E06810 /* LaunchScreen.storyboard in Resources */,
+				FAA5F1141E3AD2F900E06810 /* Assets.xcassets in Resources */,
+				FAA5F1121E3AD2F900E06810 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B22DB75F417406AE909E9FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB4E76D34824C2531B20B823 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB8B6EE8E46BA90EC5F3C11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA5F1051E3AD2F900E06810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA5F1211E3ADC7300E06810 /* CoreDataStack.swift in Sources */,
+				FAA5F10F1E3AD2F900E06810 /* ViewController.swift in Sources */,
+				FAA5F1281E3AE15700E06810 /* Restaurant+CoreDataClass.swift in Sources */,
+				FAA5F1231E3ADC9C00E06810 /* GeoSearch.xcdatamodel in Sources */,
+				FAA5F10D1E3AD2F900E06810 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAA5F1101E3AD2F900E06810 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA5F1111E3AD2F900E06810 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA5F1151E3AD2F900E06810 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA5F1161E3AD2F900E06810 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA5F1191E3AD2F900E06810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAA5F11A1E3AD2F900E06810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA5F11C1E3AD2F900E06810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA844EF116F6A98AFFDCDFAE /* Pods-GeoSearch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6A7K9VGHXX;
+				INFOPLIST_FILE = GeoSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexfu.t1.GeoSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FAA5F11D1E3AD2F900E06810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229A113ECBC82D9610021699 /* Pods-GeoSearch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6A7K9VGHXX;
+				INFOPLIST_FILE = GeoSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexfu.t1.GeoSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA5F1041E3AD2F900E06810 /* Build configuration list for PBXProject "GeoSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA5F1191E3AD2F900E06810 /* Debug */,
+				FAA5F11A1E3AD2F900E06810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA5F11B1E3AD2F900E06810 /* Build configuration list for PBXNativeTarget "GeoSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA5F11C1E3AD2F900E06810 /* Debug */,
+				FAA5F11D1E3AD2F900E06810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAA5F1011E3AD2F900E06810 /* Project object */;
+}
