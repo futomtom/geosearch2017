@@ -14,13 +14,16 @@ import CSV
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var coreData = CoreDataStack()
+    var coreDataStack = CoreDataStack()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        
         print(urls[urls.count-1] as URL) // look for doc. directory
+        let vc = window?.rootViewController as? ViewController
+        vc?.coreDataStack = coreDataStack
+
         importData()
         return true
     }
@@ -44,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        coreData.saveContext()
+        coreDataStack.saveContext()
     }
     /*
     - 0 : "business_id"
@@ -57,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     - 7 : "longitude"
     - 8 : "phone_number"
 */
+
     func importData () {
         let privateContext = CoreDataStack().persistentContainer.newBackgroundContext()
         let path = Bundle.main.path(forResource: "businesses", ofType: "csv")!
@@ -73,57 +77,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             restaurant.city = row[3]
             restaurant.state = row[4]
             restaurant.postalCode = row[5]
-            if let lat = Double(row[6]) {
-                restaurant.latitude = NSNumber(value: lat)
-            } else {
-                restaurant.latitude = 0
-            }
-            
-            if let lon = Double(row[6]) {
-                restaurant.longitude =  NSNumber(value: lon)
-            } else {
-                restaurant.longitude = 0
-            }
-    
+
+            let lat = Double(row[6]) ?? 0
+            restaurant.latitude = NSNumber(value: lat)
+            let lon = Double(row[7]) ?? 0
+            restaurant.longitude = NSNumber(value: lon)
+            let hash = Geohash.encode(latitude: lat, longitude: lon, 8)
+            print(hash)
+            restaurant.geohash = hash
+
             restaurant.phoneNumber = row[8]
-            
             try! privateContext.save()
-      
         }
-
-        /*
-
-
-
-            if let lat = Double(row["latitude"]!) {
-                restaurant.latitude = NSNumber(double: lat)
-
-                if let lon = Double(row["longitude"]!) {
-                    restaurant.longitude = NSNumber(double: lon)
-                    //  print("\(restaurant.latitude?.doubleValue), \(restaurant.longitude?.doubleValue)")
-
-                    restaurant.geohash = Geohash.encode(latitude: lat, longitude: lon, 8)
-                }
-            }
-
-
-            restaurant.name = row["name"]
-            restaurant.phoneNumber = row["phone_number"]
-            restaurant.postalCode = row["postal_code"]
-            restaurant.state = row["state"]
-
-        }
-            else {
-            print("Failed to create a new Restaurant object in the context")
-        }
-
-
     }
-*/
-
-
-    }
-
-
+ 
 }
 

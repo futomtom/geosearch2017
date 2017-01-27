@@ -11,6 +11,9 @@ import CoreData
 
 class CoreDataStack {
 
+    lazy var mainContext: NSManagedObjectContext = {
+        return self.persistentContainer.viewContext
+    }()
     
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -45,6 +48,10 @@ class CoreDataStack {
             }
         }
     }
+    
+
+    
+    
     
     func seedCoreDataContainerIfFirstLaunch() {
         
