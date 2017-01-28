@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print(urls[urls.count-1] as URL) // look for doc. directory
-        let vc = window?.rootViewController as? ViewController
+        let vc = window?.rootViewController as? MainViewController
         vc?.coreDataStack = coreDataStack
 
-        importData()
+//        importData()
         return true
     }
 
@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func importData () {
         let privateContext = CoreDataStack().persistentContainer.newBackgroundContext()
-        let path = Bundle.main.path(forResource: "businesses", ofType: "csv")!
+       let path = Bundle.main.path(forResource: "businesses", ofType: "csv")!
         let stream = InputStream(fileAtPath: path)!
         var csv = try! CSV(stream: stream)
         let _ = csv.next() //skip first one
