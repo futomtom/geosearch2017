@@ -10,8 +10,19 @@ import UIKit
 import CoreData
 import MapKit
 
-class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
+
+extension MKMapRect {
+
+    func getCenter() -> MKMapPoint {
+        return MKMapPointMake(MKMapRectGetMidX(self), MKMapRectGetMidY(self))
+}
+
+ 
+ 
+
+class MainViewController: UIViewController, NSFetchedResultsControllerDelegate, MKMapViewDelegate
 {
+    @IBOutlet weak var hoverBar: UIView!
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
@@ -20,15 +31,23 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
     @IBOutlet weak var mapHeight: NSLayoutConstraint!
     var coreDataStack: CoreDataStack!
     var fetchedResultsController: NSFetchedResultsController<Restaurant>!
+    
+    // Array for holding coordinates
+    var coordinates = [CLLocationCoordinate2D]()
+    // Polygon to draw on map
+    var polygon = MKPolygon()
+  //  var mapEditing = false
+    let screenHight = UIScreen.main.bounds.size.height
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let hight = UIScreen.main.bounds.size.height
+        
         
         let loc = CLLocationCoordinate2DMake(37.750893, -122.451336)
         mapView.region = MKCoordinateRegionMakeWithDistance(loc, 1200, 1200)
-        mapHeight.constant = hight
-        
+    
+         mapHeight.constant =  screenHight / 3
         let request: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
         let hash = Geohash.encode(latitude: 37.7702087, longitude: -122.4458823, 5)
         request.predicate = NSPredicate(format: "geohash BEGINSWITH %@", hash)
@@ -39,38 +58,25 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
                                                               cacheName: nil)
         fetchedResultsController.delegate = self
         tableView.isHidden = true
-
-     
     }
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        // Create polygon renderer
-        let renderer = MKPolygonRenderer(overlay: overlay)
-        
-        // Set the line color
-        renderer.strokeColor = UIColor.orange
-        
-        // Set the line width
-        renderer.lineWidth = 5.0
-        
-        // Return the customized renderer
-        return renderer
-    }
     
-    // MARK: - Get notified when the view begins/ends editing
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
+    
+    @IBAction func toggleMapEdit(_ sender: UIButton) {
+        isEditing = !sender.isSelected
+        sender.isSelected = isEditing
         
-        if editing {
-            // Disable the map from moving
-            mapView.isUserInteractionEnabled = false
-        }
-        else {
-            // Enable the map to move
-            mapView.isUserInteractionEnabled = true
-        }
+        mapView.isUserInteractionEnabled = !isEditing
+        mapHeight.constant = isEditing ? screenHight: screenHight / 3
+        
+        
+        let coordinate = MKCoordinateForMapPoint(boundingMapRect.getCenter())
+        
+        
     }
 
+    
+ 
     
     // MARK: - Handle Touches
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -78,7 +84,7 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
         if isEditing {
             // Empty array
             coordinates.removeAll()
-            
+           
             // Convert touches to map coordinates
             for touch in touches {
                 let coordinate = mapView.convert(touch.location(in: mapView), toCoordinateFrom: mapView)
@@ -103,22 +109,37 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         // If editing
         if isEditing {
-            print("end \(touches.count)" )
             // Convert touches to map coordinates
             for touch in touches {
                 let coordinate = mapView.convert(touch.location(in: mapView), toCoordinateFrom: mapView)
                 coordinates.append(coordinate)
+                
             }
             
             // Remove existing polygon
             mapView.remove(polygon)
-            
+    
             // Create new polygon
             polygon = MKPolygon(coordinates: &coordinates, count: coordinates.count)
             
             // Add polygon to map
             mapView.add(polygon)
         }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        // Create polygon renderer
+        let renderer = MKPolygonRenderer(overlay: overlay)
+        
+        // Set the line color
+        renderer.strokeColor = UIColor.orange
+        
+        // Set the line width
+        renderer.lineWidth = 5.0
+        
+        // Return the customized renderer
+        return renderer
     }
 
     

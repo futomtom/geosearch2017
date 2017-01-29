@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		678104B7B37B062AAAD618F1 /* Pods_GeoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */; };
+		FA48523C1E3DA94500434946 /* HoverBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48523B1E3DA94500434946 /* HoverBarView.swift */; };
 		FAA5F10D1E3AD2F900E06810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */; };
 		FAA5F1121E3AD2F900E06810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1101E3AD2F900E06810 /* Main.storyboard */; };
 		FAA5F1141E3AD2F900E06810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1131E3AD2F900E06810 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		229A113ECBC82D9610021699 /* Pods-GeoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch.release.xcconfig"; sourceTree = "<group>"; };
 		433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA48523B1E3DA94500434946 /* HoverBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoverBarView.swift; sourceTree = "<group>"; };
 		FA844EF116F6A98AFFDCDFAE /* Pods-GeoSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA5F1091E3AD2F900E06810 /* GeoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */,
 				FAA5F12E1E3AF62E00E06810 /* MainViewController.swift */,
+				FA48523B1E3DA94500434946 /* HoverBarView.swift */,
 				FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */,
 				FAA5F1101E3AD2F900E06810 /* Main.storyboard */,
 				FAA5F1351E3B05E900E06810 /* Geohash.swift */,
@@ -249,6 +252,7 @@
 				FAA5F1281E3AE15700E06810 /* Restaurant+CoreDataClass.swift in Sources */,
 				FAA5F1361E3B05E900E06810 /* Geohash.swift in Sources */,
 				FAA5F1231E3ADC9C00E06810 /* GeoSearch.xcdatamodel in Sources */,
+				FA48523C1E3DA94500434946 /* HoverBarView.swift in Sources */,
 				FAA5F10D1E3AD2F900E06810 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

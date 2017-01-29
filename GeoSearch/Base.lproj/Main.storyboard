@@ -26,7 +26,60 @@
                                 <constraints>
                                     <constraint firstAttribute="height" id="Fg5-j5-Ppl"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="FQj-t2-aG0" id="pC6-AN-pxd"/>
+                                </connections>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h62-2t-seZ" userLabel="HoverBar" customClass="HoverBarView" customModule="GeoSearch" customModuleProvider="target">
+                                <rect key="frame" x="307" y="50" width="38" height="120"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-PR-TGv">
+                                        <rect key="frame" x="-182" y="-19" width="240" height="128"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3hS-38-XcT">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6qw-2A-7eG">
+                                        <rect key="frame" x="4" y="11" width="30" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-yK-3Ji">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="5qs-uZ-a5D"/>
+                                                    <constraint firstAttribute="height" constant="30" id="jr4-wZ-RSP"/>
+                                                </constraints>
+                                                <state key="normal" image="MapEdit"/>
+                                                <state key="selected" image="MapEdit_F"/>
+                                                <connections>
+                                                    <action selector="toggleMapEdit:" destination="FQj-t2-aG0" eventType="touchUpInside" id="oDr-Rf-Lpc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlB-lZ-es3" userLabel="ZoomIn">
+                                                <rect key="frame" x="0.0" y="34" width="30" height="30"/>
+                                                <state key="normal" image="ZoomIn"/>
+                                                <state key="highlighted" image="ZoomIn_F"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiq-Hi-0Lx" userLabel="ZoomOut">
+                                                <rect key="frame" x="0.0" y="68" width="30" height="30"/>
+                                                <state key="normal" image="ZoomOut"/>
+                                                <state key="highlighted" image="ZoomOut_F"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="FKn-yd-NFj"/>
+                                    <constraint firstAttribute="trailing" secondItem="OvL-PR-TGv" secondAttribute="trailing" id="KZS-o8-j73"/>
+                                    <constraint firstItem="OvL-PR-TGv" firstAttribute="leading" secondItem="h62-2t-seZ" secondAttribute="leading" id="d3a-dw-Chu"/>
+                                    <constraint firstItem="OvL-PR-TGv" firstAttribute="top" secondItem="h62-2t-seZ" secondAttribute="top" id="j55-Yj-ffZ"/>
+                                    <constraint firstAttribute="height" constant="120" id="lHW-EW-McH"/>
+                                    <constraint firstAttribute="bottom" secondItem="OvL-PR-TGv" secondAttribute="bottom" id="mhN-ze-JTN"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aQs-Vm-0Jr">
                                 <rect key="frame" x="0.0" y="222.5" width="375" height="444.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,13 +116,22 @@
                             <constraint firstItem="MFi-LP-A7m" firstAttribute="top" secondItem="Q9F-27-HIk" secondAttribute="top" id="ABN-wr-tAQ"/>
                             <constraint firstItem="aQs-Vm-0Jr" firstAttribute="leading" secondItem="Q9F-27-HIk" secondAttribute="leading" id="GK9-9Y-GpC"/>
                             <constraint firstItem="aQs-Vm-0Jr" firstAttribute="top" secondItem="0ZU-Pr-crq" secondAttribute="bottom" id="IvN-9A-sxK"/>
+                            <constraint firstItem="h62-2t-seZ" firstAttribute="top" secondItem="0ZU-Pr-crq" secondAttribute="bottom" constant="30" id="NqU-5Z-f8L"/>
                             <constraint firstAttribute="trailing" secondItem="MFi-LP-A7m" secondAttribute="trailing" id="fKe-U6-ybq"/>
                             <constraint firstAttribute="trailing" secondItem="aQs-Vm-0Jr" secondAttribute="trailing" id="ff0-xC-CFB"/>
+                            <constraint firstItem="h62-2t-seZ" firstAttribute="top" secondItem="MFi-LP-A7m" secondAttribute="bottom" constant="30" id="hrx-Qt-jfk"/>
+                            <constraint firstAttribute="trailing" secondItem="h62-2t-seZ" secondAttribute="trailing" constant="30" id="pAC-Hg-W9e"/>
                             <constraint firstItem="MFi-LP-A7m" firstAttribute="leading" secondItem="Q9F-27-HIk" secondAttribute="leading" id="qTS-VW-m5i"/>
                             <constraint firstItem="ICv-aI-27a" firstAttribute="top" secondItem="aQs-Vm-0Jr" secondAttribute="bottom" id="uQt-Vo-OnU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hrx-Qt-jfk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="hoverBar" destination="h62-2t-seZ" id="gSU-l4-UIX"/>
                         <outlet property="mapHeight" destination="Fg5-j5-Ppl" id="dtc-7h-P9J"/>
                         <outlet property="mapView" destination="MFi-LP-A7m" id="lwE-1w-LXi"/>
                         <outlet property="tableView" destination="aQs-Vm-0Jr" id="1Ng-EM-UpH"/>
@@ -93,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y0O-5c-z6O" id="SCI-0J-HcY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -109,4 +171,12 @@
             <point key="canvasLocation" x="633" y="140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MapEdit" width="40" height="40"/>
+        <image name="MapEdit_F" width="40" height="40"/>
+        <image name="ZoomIn" width="30" height="30"/>
+        <image name="ZoomIn_F" width="30" height="30"/>
+        <image name="ZoomOut" width="30" height="30"/>
+        <image name="ZoomOut_F" width="30" height="30"/>
+    </resources>
 </document>
