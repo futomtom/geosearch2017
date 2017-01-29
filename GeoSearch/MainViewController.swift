@@ -15,10 +15,11 @@ extension MKMapRect {
 
     func getCenter() -> MKMapPoint {
         return MKMapPointMake(MKMapRectGetMidX(self), MKMapRectGetMidY(self))
+ }
 }
 
  
- 
+
 
 class MainViewController: UIViewController, NSFetchedResultsControllerDelegate, MKMapViewDelegate
 {
@@ -48,16 +49,8 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         mapView.region = MKCoordinateRegionMakeWithDistance(loc, 1200, 1200)
     
          mapHeight.constant =  screenHight / 3
-        let request: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
-        let hash = Geohash.encode(latitude: 37.7702087, longitude: -122.4458823, 5)
-        request.predicate = NSPredicate(format: "geohash BEGINSWITH %@", hash)
-        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
-                                                              managedObjectContext: coreDataStack.mainContext,
-                                                              sectionNameKeyPath: "postalCode",
-                                                              cacheName: nil)
-        fetchedResultsController.delegate = self
-        tableView.isHidden = true
+        tableViewHeight.constant = screenHight * 2 / 3
+    
     }
     
     
@@ -68,12 +61,53 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         
         mapView.isUserInteractionEnabled = !isEditing
         mapHeight.constant = isEditing ? screenHight: screenHight / 3
+        tableViewHeight.constant = isEditing ? 0: screenHight * 2 / 3
+        tableView.isHidden = isEditing
         
-        
-        let coordinate = MKCoordinateForMapPoint(boundingMapRect.getCenter())
-        
-        
+       
+    
     }
+    
+    override func viewDidLayoutSubviews() {
+        print("hi")
+        if !isEditing && coordinates.count > 0 {
+            print(coordinates.count)
+            let boundingMapRect = polygon.boundingMapRect
+            
+            
+            mapView.visibleMapRect = mapView.mapRectThatFits(boundingMapRect)
+            let center = MKCoordinateForMapPoint(boundingMapRect.getCenter())
+            SearchNearBy(center)
+            
+        }
+    }
+    
+    func SearchNearBy(_ coordinate:CLLocationCoordinate2D ) {
+        let request: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
+        let hash = Geohash.encode(latitude: coordinate.latitude   , longitude: coordinate.longitude, 5)
+        request.predicate = NSPredicate(format: "geohash BEGINSWITH %@", hash)
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: coreDataStack.mainContext,
+                                                              sectionNameKeyPath: "postalCode",
+                                                              cacheName: nil)
+        fetchedResultsController.delegate = self
+        do {
+            try fetchedResultsController.performFetch()
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+            }
+           
+            
+        } catch let error as NSError {
+            print("Fetching error: \(error), \(error.userInfo)")
+        }
+
+    }
+
+
+    
 
     
  
@@ -143,15 +177,7 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate, 
     }
 
     
-    func search() {
-        
-        do {
-            //       try fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Fetching error: \(error), \(error.userInfo)")
-        }
-    }
-
+  
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
@@ -160,7 +186,7 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate, 
 }
 
 
-extension MainViewController:UITableViewDelegate, UITableViewDataSource {
+extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let section = fetchedResultsController.sections?[section]
@@ -168,6 +194,7 @@ extension MainViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        guard  fetchedResultsController != nil else { return 0}
         return fetchedResultsController.sections?.count ?? 0
     }
     

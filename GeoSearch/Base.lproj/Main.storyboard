@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FQj-t2-aG0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FQj-t2-aG0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -115,20 +115,14 @@
                         <constraints>
                             <constraint firstItem="MFi-LP-A7m" firstAttribute="top" secondItem="Q9F-27-HIk" secondAttribute="top" id="ABN-wr-tAQ"/>
                             <constraint firstItem="aQs-Vm-0Jr" firstAttribute="leading" secondItem="Q9F-27-HIk" secondAttribute="leading" id="GK9-9Y-GpC"/>
-                            <constraint firstItem="aQs-Vm-0Jr" firstAttribute="top" secondItem="0ZU-Pr-crq" secondAttribute="bottom" id="IvN-9A-sxK"/>
                             <constraint firstItem="h62-2t-seZ" firstAttribute="top" secondItem="0ZU-Pr-crq" secondAttribute="bottom" constant="30" id="NqU-5Z-f8L"/>
                             <constraint firstAttribute="trailing" secondItem="MFi-LP-A7m" secondAttribute="trailing" id="fKe-U6-ybq"/>
                             <constraint firstAttribute="trailing" secondItem="aQs-Vm-0Jr" secondAttribute="trailing" id="ff0-xC-CFB"/>
-                            <constraint firstItem="h62-2t-seZ" firstAttribute="top" secondItem="MFi-LP-A7m" secondAttribute="bottom" constant="30" id="hrx-Qt-jfk"/>
+                            <constraint firstItem="aQs-Vm-0Jr" firstAttribute="top" secondItem="MFi-LP-A7m" secondAttribute="bottom" constant="2" id="h1c-Go-Khg"/>
                             <constraint firstAttribute="trailing" secondItem="h62-2t-seZ" secondAttribute="trailing" constant="30" id="pAC-Hg-W9e"/>
                             <constraint firstItem="MFi-LP-A7m" firstAttribute="leading" secondItem="Q9F-27-HIk" secondAttribute="leading" id="qTS-VW-m5i"/>
                             <constraint firstItem="ICv-aI-27a" firstAttribute="top" secondItem="aQs-Vm-0Jr" secondAttribute="bottom" id="uQt-Vo-OnU"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="hrx-Qt-jfk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="hoverBar" destination="h62-2t-seZ" id="gSU-l4-UIX"/>
