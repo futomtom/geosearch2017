@@ -67,14 +67,13 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
         mapView.isUserInteractionEnabled = !isEditing
         
         UIView.animate(withDuration: 1, animations: {
-          
-
             self.mapView.frame.size.height = self.isEditing ? self.screenHight : self.screenHight / 3
-          
         })
         mapHeight.constant = isEditing ? screenHight : screenHight / 3
         tableViewHeight.constant = isEditing ? 0 : screenHight * 2 / 3
-       //   self.tableView.frame.size.height = self.isEditing ? 0 : self.screenHight * 2 / 3
+        if isEditing {
+            clusteringManager.removeAll()
+        }
 
         
     
@@ -144,7 +143,7 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
     }
     
     func pointIsInside(point: MKMapPoint, polygon: MKPolygon) -> Bool {
-        let mapRect = MKMapRectMake(point.x, point.y, 0.0001, 0.0001)
+        let mapRect = MKMapRectMake(point.x, point.y, 0.00001, 0.00001)
         return polygon.intersects(mapRect)
     }
 
