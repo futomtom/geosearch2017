@@ -62,11 +62,17 @@
                                                 <rect key="frame" x="0.0" y="34" width="30" height="30"/>
                                                 <state key="normal" image="ZoomIn"/>
                                                 <state key="highlighted" image="ZoomIn_F"/>
+                                                <connections>
+                                                    <action selector="zoomIn:" destination="FQj-t2-aG0" eventType="touchUpInside" id="kKj-1H-SdH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiq-Hi-0Lx" userLabel="ZoomOut">
                                                 <rect key="frame" x="0.0" y="68" width="30" height="30"/>
                                                 <state key="normal" image="ZoomOut"/>
                                                 <state key="highlighted" image="ZoomOut_F"/>
+                                                <connections>
+                                                    <action selector="zoomOut:" destination="FQj-t2-aG0" eventType="touchUpInside" id="Q0n-uo-10R"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

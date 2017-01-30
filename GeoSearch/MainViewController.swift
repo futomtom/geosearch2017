@@ -50,6 +50,8 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
 
         mapHeight.constant = screenHight / 3
         tableViewHeight.constant = screenHight * 2 / 3
+        
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
 
@@ -63,8 +65,19 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
         sender.isSelected = isEditing
 
         mapView.isUserInteractionEnabled = !isEditing
+        
+        UIView.animate(withDuration: 1, animations: {
+          
+
+            self.mapView.frame.size.height = self.isEditing ? self.screenHight : self.screenHight / 3
+          
+        })
         mapHeight.constant = isEditing ? screenHight : screenHight / 3
         tableViewHeight.constant = isEditing ? 0 : screenHight * 2 / 3
+       //   self.tableView.frame.size.height = self.isEditing ? 0 : self.screenHight * 2 / 3
+
+        
+    
         tableView.isHidden = isEditing
 
 
@@ -107,6 +120,7 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
         }
 
     }
+    
 
     func feedFBAnnotations () {
 
@@ -123,8 +137,8 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
         }
         DispatchQueue.main.async {
             self.clusteringManager.add(annotations: pinArray)
-      //      self.mapView.showAnnotations(self.mapView.annotations, animated: true)
-            self.clusteringManager.display(annotations: pinArray, onMapView: self.mapView)
+            self.mapView.showAnnotations(pinArray, animated: true)
+      //      self.clusteringManager.display(annotations: pinArray, onMapView: self.mapView)
 
         }
     }
@@ -134,7 +148,22 @@ class MainViewController: UIViewController, NSFetchedResultsControllerDelegate
         return polygon.intersects(mapRect)
     }
 
+    @IBAction func zoomIn(_ sender: Any) {
+        zoomMap(byFactor: 0.5)
+    }
 
+    @IBAction func zoomOut(_ sender: Any) {
+        zoomMap(byFactor: 2)
+    }
+    
+    func zoomMap(byFactor delta: Double) {
+        var region: MKCoordinateRegion = self.mapView.region
+        var span: MKCoordinateSpan = mapView.region.span
+        span.latitudeDelta *= delta
+        span.longitudeDelta *= delta
+        region.span = span
+        mapView.setRegion(region, animated: true)
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isEditing {
