@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CSV
+
 
 
 @UIApplicationMain
@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     - 7 : "longitude"
     - 8 : "phone_number"
 */
-
+/*
     func importData () {
         let privateContext = CoreDataStack().persistentContainer.newBackgroundContext()
        let path = Bundle.main.path(forResource: "businesses", ofType: "csv")!
@@ -90,6 +90,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             try! privateContext.save()
         }
     }
- 
+ */
 }
 

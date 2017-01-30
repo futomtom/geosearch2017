@@ -1,6 +1,0 @@
-framework module Pods_GeoSearch {
-  umbrella header "Pods-GeoSearch-umbrella.h"
-
-  export *
-  module * { export * }
-}

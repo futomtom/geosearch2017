@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		678104B7B37B062AAAD618F1 /* Pods_GeoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */; };
+		FA0661351E3EC746007C3255 /* FBAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06612A1E3EC746007C3255 /* FBAnnotation.swift */; };
+		FA0661361E3EC746007C3255 /* FBAnnotationCluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06612B1E3EC746007C3255 /* FBAnnotationCluster.swift */; };
+		FA0661371E3EC746007C3255 /* FBAnnotationClusterTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06612C1E3EC746007C3255 /* FBAnnotationClusterTemplate.swift */; };
+		FA0661381E3EC746007C3255 /* FBAnnotationClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06612D1E3EC746007C3255 /* FBAnnotationClusterView.swift */; };
+		FA0661391E3EC746007C3255 /* FBAnnotationClusterViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06612E1E3EC746007C3255 /* FBAnnotationClusterViewConfiguration.swift */; };
+		FA06613A1E3EC746007C3255 /* FBBoundingBox+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06612F1E3EC746007C3255 /* FBBoundingBox+MapKit.swift */; };
+		FA06613B1E3EC746007C3255 /* FBBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0661301E3EC746007C3255 /* FBBoundingBox.swift */; };
+		FA06613C1E3EC746007C3255 /* FBClusteringManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0661311E3EC746007C3255 /* FBClusteringManager.swift */; };
+		FA06613D1E3EC746007C3255 /* FBQuadTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0661321E3EC746007C3255 /* FBQuadTree.swift */; };
+		FA06613E1E3EC746007C3255 /* FBQuadTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0661331E3EC746007C3255 /* FBQuadTreeNode.swift */; };
+		FA06613F1E3EC746007C3255 /* FBZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0661341E3EC746007C3255 /* FBZoomLevel.swift */; };
+		FA0661411E3ECE75007C3255 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0661401E3ECE75007C3255 /* StoreCell.swift */; };
 		FA48523C1E3DA94500434946 /* HoverBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48523B1E3DA94500434946 /* HoverBarView.swift */; };
 		FAA5F10D1E3AD2F900E06810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */; };
 		FAA5F1121E3AD2F900E06810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA5F1101E3AD2F900E06810 /* Main.storyboard */; };
@@ -26,6 +37,18 @@
 /* Begin PBXFileReference section */
 		229A113ECBC82D9610021699 /* Pods-GeoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch.release.xcconfig"; sourceTree = "<group>"; };
 		433D7998E4C1E3F26F9F55EE /* Pods_GeoSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA06612A1E3EC746007C3255 /* FBAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAnnotation.swift; sourceTree = "<group>"; };
+		FA06612B1E3EC746007C3255 /* FBAnnotationCluster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAnnotationCluster.swift; sourceTree = "<group>"; };
+		FA06612C1E3EC746007C3255 /* FBAnnotationClusterTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAnnotationClusterTemplate.swift; sourceTree = "<group>"; };
+		FA06612D1E3EC746007C3255 /* FBAnnotationClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAnnotationClusterView.swift; sourceTree = "<group>"; };
+		FA06612E1E3EC746007C3255 /* FBAnnotationClusterViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAnnotationClusterViewConfiguration.swift; sourceTree = "<group>"; };
+		FA06612F1E3EC746007C3255 /* FBBoundingBox+MapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FBBoundingBox+MapKit.swift"; sourceTree = "<group>"; };
+		FA0661301E3EC746007C3255 /* FBBoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBBoundingBox.swift; sourceTree = "<group>"; };
+		FA0661311E3EC746007C3255 /* FBClusteringManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBClusteringManager.swift; sourceTree = "<group>"; };
+		FA0661321E3EC746007C3255 /* FBQuadTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBQuadTree.swift; sourceTree = "<group>"; };
+		FA0661331E3EC746007C3255 /* FBQuadTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBQuadTreeNode.swift; sourceTree = "<group>"; };
+		FA0661341E3EC746007C3255 /* FBZoomLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBZoomLevel.swift; sourceTree = "<group>"; };
+		FA0661401E3ECE75007C3255 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		FA48523B1E3DA94500434946 /* HoverBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoverBarView.swift; sourceTree = "<group>"; };
 		FA844EF116F6A98AFFDCDFAE /* Pods-GeoSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA5F1091E3AD2F900E06810 /* GeoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678104B7B37B062AAAD618F1 /* Pods_GeoSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,11 +95,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA0661291E3EC746007C3255 /* FBAnnotationClustering */ = {
+			isa = PBXGroup;
+			children = (
+				FA06612A1E3EC746007C3255 /* FBAnnotation.swift */,
+				FA06612B1E3EC746007C3255 /* FBAnnotationCluster.swift */,
+				FA06612C1E3EC746007C3255 /* FBAnnotationClusterTemplate.swift */,
+				FA06612D1E3EC746007C3255 /* FBAnnotationClusterView.swift */,
+				FA06612E1E3EC746007C3255 /* FBAnnotationClusterViewConfiguration.swift */,
+				FA06612F1E3EC746007C3255 /* FBBoundingBox+MapKit.swift */,
+				FA0661301E3EC746007C3255 /* FBBoundingBox.swift */,
+				FA0661311E3EC746007C3255 /* FBClusteringManager.swift */,
+				FA0661321E3EC746007C3255 /* FBQuadTree.swift */,
+				FA0661331E3EC746007C3255 /* FBQuadTreeNode.swift */,
+				FA0661341E3EC746007C3255 /* FBZoomLevel.swift */,
+			);
+			path = FBAnnotationClustering;
+			sourceTree = "<group>";
+		};
 		FAA5F1001E3AD2F900E06810 = {
 			isa = PBXGroup;
 			children = (
 				FAA5F12A1E3AE16100E06810 /* model */,
 				FAA5F10B1E3AD2F900E06810 /* GeoSearch */,
+				FA0661291E3EC746007C3255 /* FBAnnotationClustering */,
 				FAA5F10A1E3AD2F900E06810 /* Products */,
 				C73721D1DD8AF99D4791D8AD /* Pods */,
 				6E17DFA37453B7BE6E6C7EEA /* Frameworks */,
@@ -97,6 +138,7 @@
 			children = (
 				FAA5F10C1E3AD2F900E06810 /* AppDelegate.swift */,
 				FAA5F12E1E3AF62E00E06810 /* MainViewController.swift */,
+				FA0661401E3ECE75007C3255 /* StoreCell.swift */,
 				FA48523B1E3DA94500434946 /* HoverBarView.swift */,
 				FAA5F1201E3ADC7300E06810 /* CoreDataStack.swift */,
 				FAA5F1101E3AD2F900E06810 /* Main.storyboard */,
@@ -127,12 +169,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA5F11B1E3AD2F900E06810 /* Build configuration list for PBXNativeTarget "GeoSearch" */;
 			buildPhases = (
-				0B22DB75F417406AE909E9FE /* [CP] Check Pods Manifest.lock */,
 				FAA5F1051E3AD2F900E06810 /* Sources */,
 				FAA5F1061E3AD2F900E06810 /* Frameworks */,
 				FAA5F1071E3AD2F900E06810 /* Resources */,
-				DB4E76D34824C2531B20B823 /* [CP] Embed Pods Frameworks */,
-				DFB8B6EE8E46BA90EC5F3C11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +195,7 @@
 					FAA5F1081E3AD2F900E06810 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 6A7K9VGHXX;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -194,65 +234,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0B22DB75F417406AE909E9FE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DB4E76D34824C2531B20B823 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFB8B6EE8E46BA90EC5F3C11 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoSearch/Pods-GeoSearch-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		FAA5F1051E3AD2F900E06810 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0661361E3EC746007C3255 /* FBAnnotationCluster.swift in Sources */,
+				FA0661391E3EC746007C3255 /* FBAnnotationClusterViewConfiguration.swift in Sources */,
+				FA06613A1E3EC746007C3255 /* FBBoundingBox+MapKit.swift in Sources */,
+				FA0661371E3EC746007C3255 /* FBAnnotationClusterTemplate.swift in Sources */,
+				FA0661351E3EC746007C3255 /* FBAnnotation.swift in Sources */,
+				FA06613F1E3EC746007C3255 /* FBZoomLevel.swift in Sources */,
+				FA06613C1E3EC746007C3255 /* FBClusteringManager.swift in Sources */,
+				FA0661381E3EC746007C3255 /* FBAnnotationClusterView.swift in Sources */,
 				FAA5F12F1E3AF62E00E06810 /* MainViewController.swift in Sources */,
 				FAA5F1211E3ADC7300E06810 /* CoreDataStack.swift in Sources */,
+				FA06613E1E3EC746007C3255 /* FBQuadTreeNode.swift in Sources */,
 				FAA5F1281E3AE15700E06810 /* Restaurant+CoreDataClass.swift in Sources */,
+				FA06613B1E3EC746007C3255 /* FBBoundingBox.swift in Sources */,
+				FA0661411E3ECE75007C3255 /* StoreCell.swift in Sources */,
 				FAA5F1361E3B05E900E06810 /* Geohash.swift in Sources */,
 				FAA5F1231E3ADC9C00E06810 /* GeoSearch.xcdatamodel in Sources */,
 				FA48523C1E3DA94500434946 /* HoverBarView.swift in Sources */,
+				FA06613D1E3EC746007C3255 /* FBQuadTree.swift in Sources */,
 				FAA5F10D1E3AD2F900E06810 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
